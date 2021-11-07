@@ -41,11 +41,11 @@ color:#D3736C;
 }
 
 #background_home {
-    background-image: url('images/DSC_0684_dark.JPG');
+    background-image: url('./images/DSC_0684_dark.JPG');
 }
 
 #background_projects {
-    background-image: url('images/DSC_0348_21.jpg');
+    background-image: url('./images/DSC_0348_21.jpg');
 }
 
 #background_blog {
