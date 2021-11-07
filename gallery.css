@@ -1,0 +1,60 @@
+.flexcontainer {
+    position:absolute;
+    top:140px;
+
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+
+.innerbox {
+    flex: 1 0 5%;
+    
+    min-width: 300px;
+    max-width: 50%;
+
+    object-fit: cover;
+}
+.innerbox:hover {
+    animation-name: hoverArt;
+    animation-duration: 3s;
+    animation-direction: both;
+}
+
+.innerbox:active {
+    filter:brightness(70%);
+}
+
+.flexcontainer:last-child {
+    justify-content: center;
+}
+
+@media(max-width:600px) {
+    .flexcontainer {
+        position:absolute;
+        top:140px;
+    
+        display: flex;
+        flex-flow: column;
+    }
+    
+    .innerbox {
+        flex: 1 0 20%;
+        
+        min-width: 300px;
+        max-width: 100%;
+    
+        object-fit: cover;
+    }
+}
+
+@keyframes hoverArt {
+    0% {}
+    5% {transform: scale(102%);
+         box-shadow: 0 0 7px #333333;
+         filter:brightness(102%);}
+    95% {transform: scale(102%);
+         box-shadow: 0 0 7px #333333;
+         filter:brightness(102%);}
+    100% {}
+}

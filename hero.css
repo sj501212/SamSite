@@ -1,0 +1,116 @@
+
+
+.herobox {
+    background-color: #313131;
+    border-radius: 4px;
+    max-width: 66%;
+
+    position: relative;
+    margin:auto;
+    transform: translateY(35%);
+
+    animation-name: dynoText;
+    animation-direction: both;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+
+#downarrow {
+    position:absolute;
+    top:90vh;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    opacity: 0;
+
+    width: 64px;
+    animation-name: fadeout;
+    animation-duration: 3.4s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+}
+
+.redbox {
+    position:fixed;
+    top:22%;
+    left:50%;
+    width: 30%;
+    height: 60%;
+    max-width: 300px;
+    max-height:600px;
+    animation-name:red;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+}
+
+.bluebox {
+    position:fixed;
+    top:30%;
+    left:50%;
+    width: 70%;
+    height: 20%;
+    animation-name:blue;
+    animation-delay: 6s;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+}
+
+.yellowbox {
+    position:fixed;
+    top:65%;
+    left:0%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+
+    animation-name:yellow;
+    animation-delay: 3s;
+    animation-duration: 7s;
+    animation-fill-mode: both;
+}
+
+@media(max-width:600px){
+
+    .herobox {
+        max-width: 80%;
+    }
+
+}
+
+@media(max-width:960px){
+
+    .herobox h3 {
+        font-size: calc(18pt + 3vw);
+        padding: calc(15pt + 1.56vw);
+    }
+
+}
+
+
+
+
+@keyframes red {
+    0% {background-color: #4d131300; }
+    60% {background-color:#cc5b539f;}
+    100% {transform: scale(150%, 150%) translateY(10%);
+        background-color:#cc5b539f;}
+}
+
+@keyframes blue {
+    0% {background-color: #13174d00; }
+    60% {background-color:#77d0d67e;}
+    100% {transform: scale(150%, 150%)
+        translate(-20%,15%);
+        rotate: 15deg;
+        background-color:#77d0d67e;}
+}
+
+@keyframes yellow {
+    0% {background-color: #4d3f1300; }
+    100% {transform: scale(400%) translateY(20%);
+        background-color:#eee86f7c;}
+}
+
+@keyframes dynoText {
+    50% {transform: translateY(33%);}
+}

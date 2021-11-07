@@ -1,0 +1,311 @@
+*{
+    margin:0;
+    padding:0;
+    scrollbar-width: none;
+
+}
+
+html,body{
+    height:100%;
+    width:100%;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body{
+    font-family: 'Helvetica-rounded-bold', sans-serif;
+    font-size: 18px;
+
+    color:#ffffff;
+}
+
+/* SELECTION HIGHLIGHTS: */
+
+::selection {
+    background: #77CFD6; /* WebKit/Blink Browsers */
+  }
+
+::-moz-selection {
+background:#E9B8A8; /* Gecko Browsers */
+color:#D3736C;
+}
+
+/* BACKGROUNDS */
+
+.mountainbackground {
+    background-position: center 50px;
+    background-attachment: fixed;
+    background-size:cover;
+}
+
+#background_home {
+    background-image: url('images/DSC_0684_dark.JPG');
+}
+
+#background_projects {
+    background-image: url('images/DSC_0348_21.jpg');
+}
+
+#background_blog {
+    background-color: #77CFD6;
+    /* background-image: url('images/DSC_0171-2.JPG'); */
+}
+
+#background_art {
+    background-color: #242424;
+}
+
+
+h1{
+    font-family:"Helvetica-rounded-bold", Helvetica, sans-serif;
+    font-weight: 300;
+    font-size:49px;
+
+    padding: 30px 30px 0px 30px;
+
+    color:#ffffff;
+
+}
+
+#background_blog .container {
+    background-color: #D3736C;
+}
+
+/* Removing default underline hyperlink and default colour to grey(ugly linky stuff) */
+
+a{
+    color:#b8b7b7;
+    text-decoration: none;
+}
+
+/* <<< TOP BAR: >>> */
+
+header {
+    background-color: #000000;
+
+    height:98px;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+
+    z-index: 5;
+
+    text-transform: uppercase;
+} 
+
+header h1 {
+    padding:0;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+header h1:hover{
+    text-shadow: 0 0 2px #808080, 0 0 7px #ffffff;
+}
+
+nav{
+    background-color: #000000;
+    box-shadow: 0 0 1px #313131;
+    color: #ffffff;
+    border-top: 1.5px #313131 solid;
+
+    width:100%;
+    height:42px;
+
+    position: fixed;
+    top:98px;
+
+    z-index: 5;
+
+    text-transform: uppercase;
+}
+
+#navbar{
+    list-style:none;
+
+    max-width: 960px;
+    width:90%;
+    height:100%;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.navbox {
+    height:100%;
+    width:100%;
+    border-left: 1.5px #313131 solid;
+    
+    position: relative;
+}
+
+#navbar li:last-child .navbox {
+    border-right: 1.5px #313131 solid;
+}
+
+#navbar li{
+    color:#b8b7b7;
+    text-decoration: none;
+    display:block;
+	width:20%;
+    height:100%;
+	float:left;
+    text-decoration: bold;
+}
+
+#navbar li:hover{
+    background-color: #242424;
+    box-shadow: 0 0 7px #333333;
+    color: #ffffff;
+}
+
+#navbar li .navbox a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#navbar li:nth-child(1):hover .navbox a{
+    color: #77CFD6;
+}
+#navbar li:nth-child(2):hover .navbox a{
+    color: #AEE6D3;
+}
+#navbar li:nth-child(3):hover .navbox a{
+    color: #F0EDBB;
+}
+#navbar li:nth-child(4):hover .navbox a{
+    color: #E9B8A8;
+}
+#navbar li:nth-child(5):hover .navbox a{
+    color: #D3736C;
+}
+
+
+h3 {
+    font-family: "Helvetica-rounded-bold", Helvetica, sans-serif;
+    font-size: 40pt;
+    font-weight: 300;
+    padding:30px;
+
+}
+
+/* ^^^   END OF TOP BAR   ^^^ */
+
+/* Resizing: */
+
+@media(max-width:600px){
+
+    #navbar li {
+        font-size: 3vw;
+    }
+
+    header {
+        height: calc(140px - (84px - 7vw));
+    }
+
+    nav {
+        height: calc(84px - 7vw);
+        top: calc(140px - (84px - 7vw));
+    }
+
+}
+
+@media(max-width:960px){
+
+    h3 {
+        font-size: 5.6vw;
+    }
+    
+}
+
+.container{
+    max-width:960px;
+    width: 90%;
+    padding-top:140px;
+
+    margin:auto;
+
+    /* animation-name: fadein;
+    animation-direction: right;
+    animation-duration: 2.7s; */
+
+}
+
+section {
+    position:relative;
+}
+
+section p {
+    padding:30px;
+}
+
+.linebreak{
+    position:absolute;
+    height:100vh;
+    width:100vw;
+    top:100vh;
+}
+
+
+.backgroundImage {
+    position:absolute;
+    height:100vh;
+    width:100vw;
+    object-fit: cover;
+}
+
+.backgroundImageGallery {
+    position:fixed;
+    padding-top: 140px;
+    height:calc(100vh - 140px);
+    width:100vw;
+
+    filter:brightness(30%);
+}
+
+.artScale {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.imageLink {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+/* ANIMATIONS FOR FADE-IN / FADE-OUT */
+
+@keyframes fadeout {
+    0% {opacity:0;}
+    50% {opacity: 1;}
+}
+
+@keyframes fadein {
+    from {opacity:0;}
+    to {opacity: 1;}
+}
+
+/* FONTS: */
+
+@font-face {
+    font-family: "Helvetica-rounded-bold";
+    src: url(./fonts/helvetica-rounded-bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url(./fonts/Helvetica-.ttf) format("truetype");
+}
