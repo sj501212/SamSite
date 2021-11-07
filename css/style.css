@@ -41,11 +41,11 @@ color:#D3736C;
 }
 
 #background_home {
-    background-image: url('./images/DSC_0684_dark.JPG');
+    background-image: url('/images/DSC_0684_dark.JPG');
 }
 
 #background_projects {
-    background-image: url('./images/DSC_0348_21.jpg');
+    background-image: url('/images/DSC_0348_21.jpg');
 }
 
 #background_blog {
@@ -302,10 +302,10 @@ section p {
 
 @font-face {
     font-family: "Helvetica-rounded-bold";
-    src: url(./fonts/helvetica-rounded-bold.ttf) format("truetype");
+    src: url(/fonts/helvetica-rounded-bold.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Helvetica";
-    src: url(./fonts/Helvetica-.ttf) format("truetype");
+    src: url(/fonts/Helvetica-.ttf) format("truetype");
 }
