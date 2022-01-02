@@ -1,3 +1,11 @@
+:root {
+    --col1:#63d8e0; 
+    --col2:#8fe0cf;
+    --col3:#ece9a0;
+    --col4:#e79c82;
+    --col5:#d35c53;
+}
+
 *{
     margin:0;
     padding:0;
@@ -24,12 +32,12 @@ body{
 /* SELECTION HIGHLIGHTS: */
 
 ::selection {
-    background: #77CFD6; /* WebKit/Blink Browsers */
+    background: var(--col1); /* WebKit/Blink Browsers */
   }
 
 ::-moz-selection {
-background:#E9B8A8; /* Gecko Browsers */
-color:#D3736C;
+background:var(--col4); /* Gecko Browsers */
+color:var(--col3);
 }
 
 /* BACKGROUNDS */
@@ -49,7 +57,7 @@ color:#D3736C;
 }
 
 #background_blog {
-    background-color: #77CFD6;
+    background-color: var(--col2);
     /* background-image: url('images/DSC_0171-2.JPG'); */
 }
 
@@ -70,7 +78,8 @@ h1{
 }
 
 #background_blog .container {
-    background-color: #D3736C;
+    background-color: white;
+    color: black;
 }
 
 /* Removing default underline hyperlink and default colour to grey(ugly linky stuff) */
@@ -176,19 +185,19 @@ nav{
 }
 
 #navbar li:nth-child(1):hover .navbox a{
-    color: #77CFD6;
+    color: var(--col1);
 }
 #navbar li:nth-child(2):hover .navbox a{
-    color: #AEE6D3;
+    color: var(--col2);
 }
 #navbar li:nth-child(3):hover .navbox a{
-    color: #F0EDBB;
+    color: var(--col3);
 }
 #navbar li:nth-child(4):hover .navbox a{
-    color: #E9B8A8;
+    color: var(--col4);
 }
 #navbar li:nth-child(5):hover .navbox a{
-    color: #D3736C;
+    color: var(--col5);
 }
 
 
